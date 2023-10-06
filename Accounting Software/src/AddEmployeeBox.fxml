@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddEmployeeBox">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="abandonButton" mnemonicParsing="false" text="Abandon" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.8" minWidth="10.0" prefWidth="111.19999389648437" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.39999389648438" minWidth="10.0" prefWidth="65.59998779296875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="80.00001220703126" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.5999755859375" minWidth="10.0" prefWidth="102.39999999999998" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.60003662109375" minWidth="10.0" prefWidth="84.80000000000001" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.60000610351562" minWidth="10.0" prefWidth="122.40001220703124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.20001220703125" minWidth="10.0" prefWidth="88.80001220703127" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.00006103515625" minWidth="10.0" prefWidth="195.19998779296873" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Employee Code:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="employeeCodeDropdown" prefHeight="26.0" prefWidth="83.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="PPS No:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="PPSNoField" prefHeight="26.0" prefWidth="98.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Surname:" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="surnameField" prefHeight="26.0" prefWidth="106.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label text="FirstName:" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="firstNameField" prefHeight="26.0" prefWidth="161.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Label text="Employment ID:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="employmentIDField" prefHeight="26.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Department:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="departmentDropdown" prefHeight="26.0" prefWidth="109.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="Cost Centre:" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="costCentreDropdown" prefHeight="26.0" prefWidth="137.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label text="Profile:" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="profileDropdown" prefHeight="26.0" prefWidth="105.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.4000244140625" minWidth="10.0" prefWidth="60.399993896484375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="820.4000061035156" minWidth="10.0" prefWidth="820.4000061035156" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Address">
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Line 1" GridPane.rowIndex="1" />
+            <Label text="Line 2" GridPane.rowIndex="2" />
+            <Label text="Line 3" GridPane.rowIndex="3" />
+            <Label text="Line 4" GridPane.rowIndex="4" />
+            <Label text="Post Code" GridPane.rowIndex="5" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <TextField fx:id="postCodeField" />
+                  <Label text="County" />
+                  <ComboBox fx:id="countyDropdown" prefWidth="150.0" />
+                  <Label text="Country" />
+                  <ComboBox fx:id="CountryDropdown" prefWidth="150.0" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <TextField fx:id="line1Field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="line2Field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="line3Field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="line4Field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Line endX="712.0929565429688" endY="0.5928802490234375" startX="-100.0" stroke="#00000080" translateY="2.0" GridPane.columnIndex="1" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Contact &amp; Security Information">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line endX="712.0" endY="-74.0" startX="1404.0928955078125" startY="-73.686279296875" stroke="#00000080" translateX="10.0" translateY="-4.0">
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                  </Line>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.20001220703125" minWidth="10.0" prefWidth="132.8000030517578" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="747.1999969482422" minWidth="10.0" prefWidth="747.1999969482422" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="House Phone Number" />
+                  <Label text="Mobile Phone Number" GridPane.rowIndex="1" />
+                  <Label text="Email Address" GridPane.rowIndex="2" />
+                  <Label text="Payslip Pin" GridPane.rowIndex="3" />
+                  <TextField fx:id="housePhoneField" GridPane.columnIndex="1" />
+                  <TextField fx:id="mobilePhoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <TextField fx:id="payslipPinField" />
+                        <Button fx:id="generateButton" mnemonicParsing="false" text="Generate">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="98.0" text="       Gender" />
+                  <RadioButton mnemonicParsing="false" text="Male" />
+                  <RadioButton mnemonicParsing="false" text="Female" />
+                  <RadioButton mnemonicParsing="false" text="Other" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="85.0" prefWidth="419.0" spacing="5.0">
+               <children>
+                  <Label text="Employment Type" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Permanent" />
+                        <RadioButton mnemonicParsing="false" text="Part Time" />
+                        <RadioButton mnemonicParsing="false" text="Temporary" />
+                        <RadioButton mnemonicParsing="false" text="Casual" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets top="5.0" />
+         </padding></HBox>
+   </children>
+</VBox>
